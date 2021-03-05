@@ -1,0 +1,44 @@
+
+during test send update for the animation if needed
+
+indoor/outdoor
+	toggle
+  
+upspeed
+	number amount /size
+	split into packets
+	time taken per packet
+  average time
+	
+downspeed
+	number amount
+  split into packets
+	time taken per packet
+  average time
+  
+latency
+	ping
+	or average time taken
+  
+jitter
+	difference between time taken
+	average difference
+  
+latitude
+	get gps
+  
+longitude
+	get gps
+  
+MOS value
+	internal math
+  
+video streaming
+	internal math
+  
+video conference
+	internal math
+  
+VOIP
+	internal math
+  
