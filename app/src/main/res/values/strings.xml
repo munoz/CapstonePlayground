@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CapstonePlayground</string>
     <string name="animated_circle">Animated Circle</string>
+    <string name="circle_return">Return</string>
+    <string name="progress_bar">Progress Bar</string>
+    <string name="Ping">PingTest</string>
 </resources>
