@@ -17,9 +17,7 @@ import android.widget.TextView;;import com.google.android.material.button.Materi
 
 public class AnimatedCircleActivity extends AppCompatActivity {
 
-
     ProgressBar prog_ping;
-    ProgressBar prog_jitter;
     ProgressBar prog_down;
     ProgressBar prog_up;
     TextView curTest;
@@ -30,7 +28,6 @@ public class AnimatedCircleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_animated_circle);
 
         prog_ping = findViewById(R.id.progress_bar_ping);
-        prog_jitter = findViewById(R.id.progress_bar_jitter);
         prog_down = findViewById(R.id.progress_bar_down);
         prog_up = findViewById(R.id.progress_bar_up);
         curTest = findViewById(R.id.text_view_progress);
@@ -46,8 +43,6 @@ public class AnimatedCircleActivity extends AppCompatActivity {
 
     }
 
-
-
     public static Intent intentFactory(Context context) {
         Intent intent = new Intent(context, AnimatedCircleActivity.class);
 
@@ -55,14 +50,10 @@ public class AnimatedCircleActivity extends AppCompatActivity {
     }
 
     private void updateProgressBar() {
+
         if(prog_ping.getProgress() != 100) {
             curTest.setText("Ping");
             prog_ping.setProgress(prog_ping.getProgress() + 25);
-            return;
-        }
-        if(prog_jitter.getProgress() != 100) {
-            curTest.setText("Jitter");
-            prog_jitter.setProgress(prog_jitter.getProgress() + 25);
             return;
         }
         if(prog_down.getProgress() != 100) {
