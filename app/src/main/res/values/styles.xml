@@ -9,7 +9,12 @@
 
     <style name="CircularDeterminateProgressBar">
         <item name="android:indeterminateOnly">false</item>
-        <item name="android:progressDrawable">@drawable/circle</item>
+        <item name="android:progressDrawable">@drawable/determinate_circle</item>
+    </style>
+
+    <style name="CircularIndeterminateProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:progressDrawable">@drawable/indeterminate_circle</item>
     </style>
 
 </resources>
