@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Fragment2">
+
+    <fragment
+        android:id="@+id/Fragment2"
+        android:name="com.cp_kotlin.Fragment2"
+        android:label="@string/tab_2"
+        tools:layout="@layout/fragment_2">
+
+        <action
+            android:id="@+id/action_Fragment2_to_Fragment4"
+            app:destination="@id/Fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/Fragment4"
+        android:name="com.cp_kotlin.Fragment4"
+        android:label="Single Result"
+        tools:layout="@layout/fragment_4">
+
+        <action
+            android:id="@+id/action_Fragment4_to_Fragment2"
+            app:destination="@id/Fragment2" />
+    </fragment>
+</navigation>
