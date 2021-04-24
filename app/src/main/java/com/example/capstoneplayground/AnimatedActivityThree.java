@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 ;
 
 
-public class AnimatedCircleActivity extends AppCompatActivity {
+public class AnimatedActivityThree extends AppCompatActivity {
 
     ProgressBar prog_ping;
     ProgressBar prog_down;
@@ -24,13 +24,13 @@ public class AnimatedCircleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animated_circle);
+        setContentView(R.layout.activity_animated_three);
 
         prog_ping = findViewById(R.id.progress_bar_ping);
         prog_down = findViewById(R.id.progress_bar_down);
         prog_up = findViewById(R.id.progress_bar_up);
         curTest = findViewById(R.id.text_view_progress);
-        Button activityTwoButton = findViewById(R.id.activitytwoBtn);
+        Button activityFourButton = findViewById(R.id.activityfourbtn);
         Button up = findViewById(R.id.button_incr);
         up.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,10 +39,10 @@ public class AnimatedCircleActivity extends AppCompatActivity {
             }
         });
 
-        activityTwoButton.setOnClickListener(new View.OnClickListener() {
+        activityFourButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnimatedCircleActivity.this, AnimatedActivityTwo.class);
+                Intent intent = new Intent(AnimatedActivityThree.this, AnimatedActivityFour.class);
                 startActivity(intent);
             }
         });
