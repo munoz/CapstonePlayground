@@ -42,7 +42,7 @@ public class AnimatedCircleActivity extends AppCompatActivity {
         activityTwoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnimatedCircleActivity.this, AnimatedActivityTwo.class);
+                Intent intent = new Intent(AnimatedCircleActivity.this, AnimatedActivityThree.class);
                 startActivity(intent);
             }
         });
