@@ -6,6 +6,7 @@ import com.example.capstoneplayground.DB.speedResultsdao;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.room.Room;
 
 import android.content.Context;
 import android.content.Intent;
@@ -38,6 +39,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
@@ -65,6 +67,11 @@ public class AnimatedCircleActivity extends AppCompatActivity {
         prog_down = findViewById(R.id.progress_bar_down);
         prog_up = findViewById(R.id.progress_bar_up);
         curTest = findViewById(R.id.text_view_progress);
+
+        mSpeedResults = Room.databaseBuilder(this,AppDatabase.class,AppDatabase.dbName)
+                .allowMainThreadQueries()
+                .build()
+                .getspeedResultsdao();
 
         Button up = findViewById(R.id.button_incr);
         up.setOnClickListener(new View.OnClickListener() {
@@ -349,6 +356,10 @@ public class AnimatedCircleActivity extends AppCompatActivity {
                     thistest.setVoip(backend.VOIP(thistest.getMOS()));
                     System.out.println("This test:\n"+thistest);
                     mSpeedResults.insert(thistest);
+                    List<speedResults> mspeeds = mSpeedResults.getSpeedResults();
+                    for(speedResults sped : mspeeds){
+                        Log.d("from room",""+sped);
+                    }
                     handler.post(new Runnable() {
                         @Override
                         public void run() {

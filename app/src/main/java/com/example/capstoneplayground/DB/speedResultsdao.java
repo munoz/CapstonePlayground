@@ -19,7 +19,7 @@ public interface speedResultsdao {
     void update(speedResults... speedResult);
     @Delete
     void delete(speedResults... speedResult);
-    @Query("SELECT * FROM "+ AppDatabase.RESULTS_TABLE + " ORDER BY down DESC")
+    @Query("SELECT * FROM "+ AppDatabase.RESULTS_TABLE + " ORDER BY date DESC")
     List<speedResults> getSpeedResults();
     @Query("SELECT * FROM "+ AppDatabase.RESULTS_TABLE + " WHERE id = :uid")
     speedResults getSpeedResultById(int uid);

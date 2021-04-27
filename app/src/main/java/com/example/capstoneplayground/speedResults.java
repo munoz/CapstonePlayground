@@ -30,6 +30,23 @@ public class speedResults {
         this.date = new Date(now);
     }
 
+    public speedResults(Double down, String network, Double up, String ping, String jitter, String latitude, String longitude, Double MOS, String stream, String conf, String voip) {
+        long now = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("MM dd,yyyy HH:mm");
+        this.date = new Date(now);
+        this.Down = down;
+        this.Network = network;
+        this.Up = up;
+        this.ping = ping;
+        this.jitter = jitter;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.MOS = MOS;
+        this.stream = stream;
+        this.conf = conf;
+        this.voip = voip;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
