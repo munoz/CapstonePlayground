@@ -9,4 +9,7 @@
     <string name="cpuc">CPUC</string>
 
     <string name="test_result">Download, Upload, Latency, Jitter</string>
+
+    <string name="result_card_transition_name">result_card_%1$s</string>
+    <string name="result_card_detail_transition_name">result_card_detail</string>
 </resources>

@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_Fragment2_to_Fragment4"
             app:destination="@id/Fragment4" />
+        <action
+            android:id="@+id/action_Fragment2_to_ResultFragment"
+            app:destination="@id/ResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/Fragment4"
@@ -24,5 +27,11 @@
         <action
             android:id="@+id/action_Fragment4_to_Fragment2"
             app:destination="@id/Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ResultFragment"
+        android:name="com.cp_kotlin.ResultFragment"
+        android:label="Single Result"
+        tools:layout="@layout/result_page_layout">
     </fragment>
 </navigation>
